@@ -1,5 +1,7 @@
+import React from 'react';
+
 function EquipeB(props) {
-    return;
+    return <div>incoming</div>;
 }
 
 export default EquipeB;

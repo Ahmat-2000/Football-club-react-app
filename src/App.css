@@ -1,3 +1,53 @@
-.app {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 10px;
+  --black-color: #070013;
+  --white-color: #f0f2f5;
+}
+body{
+  background-color: var(--white-color);
+}
+main{
+  margin-top: 10rem;
+}
+.nav-bar{
+  position: fixed;
+  background-color: var(--black-color);
+  width: 100%;
+  top: 0;
+}
+.nav-list{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem 0;
+  list-style-type: none;
+}
+
+.nav-li-items a{
+  cursor: pointer;
+  display: block;
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1.5rem 0.5rem;
+  border-radius: 12%;
+  text-decoration: none;
+}
+.nav-li-items a:hover{
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+@media screen and (max-width:473px) {
+  .nav-li-items a{
+    font-size: 1.4rem;
+    padding: 0.5rem;
+  }
+  main{
+    margin-top: 8rem;
+  }
 }
