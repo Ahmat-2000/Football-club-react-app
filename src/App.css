@@ -1,53 +1,107 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; padding: 0; box-sizing: border-box;
 }
 :root{
-  font-size: 10px;
+  min-height: 100%; font-size: 10px; 
   --black-color: #070013;
   --white-color: #f0f2f5;
 }
 body{
   background-color: var(--white-color);
+  background-image: url(./images/sky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  font-size: 1.4rem;
 }
-main{
-  margin-top: 10rem;
+.main{
+  margin-top: 8rem;
 }
+.accueil-paragraphe{
+  margin-bottom: 5rem;
+  line-height: 1.8rem;
+}
+.accueil-content div p:last-of-type{
+  margin-bottom: unset;
+}
+/* Un contenaire, ça peut être un div, body ou un block */
+.container{
+  color: rgb(0, 0, 0);
+  border-radius: 2%;
+  border: 2px solid rgb(169, 178, 202);
+  box-shadow: -0.5px 0px 0.5px 1px rgb(0, 0, 0);
+  background-color:rgb(255, 253, 253, 40%);
+}
+/* Accueil styles */
+.accueil-content{
+  margin: 6rem auto;
+  min-height: 70vh;
+  text-align: justify;
+  padding: 1.8rem;
+  width: 90%;
+  max-width: 700px;
+}
+.accueil-header{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+}
+.accueil-header h1{
+  padding: 1rem;
+  font-size: 115%;
+}
+.accueil-header *{
+    display: inline-block;
+}
+.accueil-header img{
+  width: 50px;
+  height: 30px;
+}
+/*------------------------------------------------------------*/
+/* Navebar styling */
 .nav-bar{
+  background-color: rgb(73, 186, 227);
   position: fixed;
-  background-color: var(--black-color);
   width: 100%;
   top: 0;
+  padding: 0.9rem 0;
+  box-shadow: 0px 3px rgb(48, 164, 206);
+  border-bottom: 2px solid rgb(57, 129, 136);
 }
 .nav-list{
   display: flex;
   justify-content: space-evenly;
-  margin: 1.5rem 0;
   list-style-type: none;
 }
-
 .nav-li-items a{
   cursor: pointer;
   display: block;
-  color: var(--white-color);
+  color: var(--black-color);
   font-weight: bold;
   font-size: 1.5rem;
-  padding: 1.5rem 0.5rem;
-  border-radius: 12%;
+  padding: 0.5rem 0.5rem;
+  border-radius: 7px;
   text-decoration: none;
+  border: 2px solid var(--white-color);
 }
 .nav-li-items a:hover{
-  color: var(--black-color);
   background-color: var(--white-color);
+  box-shadow: -0.5px 0px 0.5px 1px rgb(0, 0, 0);
 }
-
-@media screen and (max-width:473px) {
+/*-----------------------------------------*/
+@media screen and (max-width:500px) {
   .nav-li-items a{
     font-size: 1.4rem;
     padding: 0.5rem;
   }
-  main{
-    margin-top: 8rem;
+  .accueil-paragraphe{
+    margin-bottom: 2rem;
+    line-height: 1.8rem;
+  }
+  .accueil-header h1{
+    font-size: 90%;
   }
 }
